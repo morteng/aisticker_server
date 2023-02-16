@@ -17,6 +17,9 @@ stored_commit_hash = None
 skip_install = True
 
 sys.argv.append("--skip-torch-cuda-test")
+sys.argv.append("--share")
+sys.argv.append("--listen")
+sys.argv.append("--api")
 
 def check_python_version():
     is_windows = platform.system() == "Windows"
