@@ -49,7 +49,7 @@ import modules.hypernetworks.hypernetwork
 #cmd_opts.listen = True
 cmd_opts.api = True
 cmd_opts.api_log = True
-cmd_opts.cors_allow_origins_regex = "*"
+cmd_opts.cors_allow_origins_regex = r"^/api/.*$"
 cmd_opts.gradio_queue = True
 cmd_opts.autolaunch = True
 cmd_opts.theme = "dark"
