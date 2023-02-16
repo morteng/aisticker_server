@@ -19,6 +19,7 @@ skip_install = True
 sys.argv.append("--skip-torch-cuda-test")
 sys.argv.append("--listen")
 sys.argv.append("--api")
+sys.argv.append("--share")
 
 def check_python_version():
     is_windows = platform.system() == "Windows"
