@@ -10,7 +10,8 @@
 clone_dir="aisticker_server"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-#export COMMANDLINE_ARGS="--api --listen "
+export COMMANDLINE_ARGS="--api --api-auth 1:1 --api-log --cors-allow-origins-regex * --gradio-queue --reinstall-xformers --autolaunch --theme dark "
+
 
 # python3 executable
 #python_cmd="python3"
