@@ -16,17 +16,7 @@ index_url = os.environ.get('INDEX_URL', "")
 stored_commit_hash = None
 skip_install = True
 
-sys.argv.append("--skip-torch-cuda-test")
-sys.argv.append("--listen")
-sys.argv.append("--api")
-sys.argv.append("--api-auth \"1:1\"")
-sys.argv.append("--api-log")
-sys.argv.append("--cors-allow-origins \"*\"")
-sys.argv.append("--cors-allow-origins-regex \"*\"")
-sys.argv.append("--gradio-queue")
-sys.argv.append("--reinstall-xformers")	
-sys.argv.append("--autolaunch")
-sys.argv.append("--theme dark")
+
 
 def check_python_version():
     is_windows = platform.system() == "Windows"
