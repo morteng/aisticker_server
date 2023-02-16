@@ -14,8 +14,10 @@ python = sys.executable
 git = os.environ.get('GIT', "git")
 index_url = os.environ.get('INDEX_URL', "")
 stored_commit_hash = None
-skip_install = False
+skip_install = True
 
+    if "--skip-torch-cuda-test" not in sys.argv:
+        sys.argv.append("--skip-torch-cuda-test")
 
 def check_python_version():
     is_windows = platform.system() == "Windows"
@@ -332,6 +334,9 @@ def tests(test_dir):
         sys.argv.append("--skip-torch-cuda-test")
     if "--disable-nan-check" not in sys.argv:
         sys.argv.append("--disable-nan-check")
+
+
+        
 
     print(f"Launching Web UI in another process for testing with arguments: {' '.join(sys.argv[1:])}")
 
