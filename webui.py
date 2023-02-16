@@ -47,8 +47,16 @@ import modules.hypernetworks.hypernetwork
 #seth's hack to always listen, reduces confusion for my webtools which won't work on a LAN without
 #it override by Morten for production server
 #cmd_opts.listen = True
+cmd_opts.api = True
+cmd_opts.api-log = True
+cmd_opts.cors-allow-origins-regex = "*"
+cmd_opts.gradio-queue = True
+cmd_opts.autolaunch = True
+cmd_opts.theme = "dark"
+#cmd_opts.api-auth  = "1:1"
+cmd_opts.api-log  = true
 
-
+#--api --api-auth 1:1 --api-log --cors-allow-origins-regex * --gradio-queue --autolaunch --theme dark 
 
 if cmd_opts.server_name:
     server_name = cmd_opts.server_name
