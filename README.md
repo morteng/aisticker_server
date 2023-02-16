@@ -5,7 +5,7 @@ colorFrom: green
 colorTo: gray
 sdk: gradio
 sdk_version: 3.18.0
-app_file: app.py
+app_file: launch.py
 pinned: false
 license: other
 ---
