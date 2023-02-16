@@ -5,13 +5,13 @@ __pycache__
 *.jpg
 *.png
 *.gif
+.vs/*
 /ESRGAN/*
 /SwinIR/*
 /repositories
 /venv
 /tmp
 /model.ckpt
-/models/**/*
 /GFPGANv1.3.pth
 /gfpgan/weights/*.pth
 /ui-config.json
