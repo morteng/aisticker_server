@@ -1,12 +1,11 @@
-metadata
-
-title: aisticker_server
-emoji: 📚
-colorFrom: indigo
-colorTo: indigo
+---
+title: Aisticker Server
+emoji: 🚀
+colorFrom: green
+colorTo: gray
 sdk: gradio
 sdk_version: 3.18.0
 app_file: app.py
 pinned: false
-license: unknown
-
+license: other
+---
