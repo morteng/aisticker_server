@@ -353,6 +353,7 @@ def tests(test_dir):
 
 def start():
     print(f"Launching {'API server' if '--nowebui' in sys.argv else 'Web UI'} with arguments: {' '.join(sys.argv[1:])}")
+    print(socket.gethostname())
     import webui
     if '--nowebui' in sys.argv:
         webui.api_only()
