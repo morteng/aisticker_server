@@ -39,6 +39,8 @@ goto :show_stdout_stderr
 :activate_venv
 set PYTHON="%VENV_DIR%\Scripts\Python.exe"
 echo venv %PYTHON%
+pip install wget
+pause
 
 :skip_venv
 if [%ACCELERATE%] == ["True"] goto :accelerate

@@ -7,6 +7,8 @@ import shlex
 import platform
 import argparse
 import json
+import socket
+
 
 dir_repos = "repositories"
 dir_extensions = "extensions"
@@ -14,7 +16,7 @@ python = sys.executable
 git = os.environ.get('GIT', "git")
 index_url = os.environ.get('INDEX_URL', "")
 stored_commit_hash = None
-skip_install = True
+skip_install = False
 
 
 
@@ -353,7 +355,12 @@ def tests(test_dir):
 
 def start():
     print(f"Launching {'API server' if '--nowebui' in sys.argv else 'Web UI'} with arguments: {' '.join(sys.argv[1:])}")
-    print(socket.gethostname())
+    # Get the local host name
+    myHostName = socket.gethostname()
+    print("Name of the localhost is {}".format(myHostName))
+    # Get the IP address of the local host
+    myIP = socket.gethostbyname(myHostName)
+    print("IP address of the localhost is {}".format(myIP))
     import webui
     if '--nowebui' in sys.argv:
         webui.api_only()
